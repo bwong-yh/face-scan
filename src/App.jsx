@@ -6,7 +6,7 @@ import Nav from "./components/nav/Nav";
 function App() {
   return (
     <>
-      <ParticlesBg type="cobweb" bg={true} />
+      <ParticlesBg type="cobweb" color="#7F8487" bg={true} />
       <div className="App">
         <Nav />
 

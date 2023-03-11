@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+    html {
+        font-family: 'Exo', sans-serif;
+    }
+}
+
 body {
     background: linear-gradient(315deg, rgba(0, 159, 198, 1) 25%, rgba(78, 185, 131, 1) 75%);
     height: 100vh;
