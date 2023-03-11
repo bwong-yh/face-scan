@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+    background: linear-gradient(315deg, rgba(0, 159, 198, 1) 25%, rgba(78, 185, 131, 1) 75%);
+    height: 100vh;
+    overflow: hidden;
+}
