@@ -8,12 +8,16 @@ const ImageForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    fetchData(input);
+    const sampleUrl = "https://samples.clarifai.com/metro-north.jpg";
+
+    fetchData(sampleUrl);
   };
 
   return (
-    <div className="mt-6 flex flex-col items-center justify-center">
-      <p className="text-3xl">Face Scan will scan your face. Give it a try!</p>
+    <div className="mt-12 flex flex-col items-center justify-center">
+      <p className="text-3xl">
+        Face Scan will scan faces on a image. Give it a try!
+      </p>
 
       <div
         className="mt-3 flex w-full max-w-2xl p-6 drop-shadow-lg"
