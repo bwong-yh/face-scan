@@ -1,7 +1,7 @@
 const USER_ID = import.meta.env.VITE_USER_ID;
 const APP_ID = "face-scan";
-const MODEL_ID = "general-image-recognition";
-const MODEL_VERSION_ID = "aa7f35c01e0642fda5cf400f543e7c40";
+const MODEL_ID = "face-detection";
+const MODEL_VERSION_ID = "6dc7e46bc9124c5c8824be4822abe105";
 const API_KEY = import.meta.env.VITE_CLARIFAI_KEY;
 
 const configClarifai = (url) => {

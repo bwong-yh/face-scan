@@ -12,7 +12,8 @@ const useClarifai = () => {
           Authorization: "Key " + API_KEY,
         },
       });
-      const data = await res.data.outputs[0].data.concepts;
+      console.log(res);
+      const data = await res.data.outputs[0].data.regions;
 
       console.log(data);
     } catch (err) {

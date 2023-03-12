@@ -8,7 +8,7 @@ const ImageForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const sampleUrl = "https://samples.clarifai.com/metro-north.jpg";
+    const sampleUrl = "https://samples.clarifai.com/face-det.jpg";
 
     fetchData(sampleUrl);
   };
