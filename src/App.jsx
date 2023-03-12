@@ -4,6 +4,7 @@ import Logo from "./components/logo/Logo";
 import Nav from "./components/nav/Nav";
 import Home from "./pages/Home";
 import Signin from "./pages/Signin";
+import Signup from "./pages/Signup";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/signin" element={<Signin />} />
+            <Route path="/signup" element={<Signup />} />
           </Routes>
         </main>
       </div>
