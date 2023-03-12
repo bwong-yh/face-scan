@@ -1,16 +1,19 @@
 import { useState } from "react";
 import useClarifai from "../../hooks/useClarifai";
 
-const ImageForm = () => {
-  const [input, setInput] = useState("");
-  const [fetchData] = useClarifai();
+const ImageForm = ({ changeImage }) => {
+  const [image, setImage] = useState("");
+  const [fetchData, isLoading, error] = useClarifai();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const sampleUrl = "https://samples.clarifai.com/face-det.jpg";
+    // const sampleUrl = "https://samples.clarifai.com/face-det.jpg";
 
-    fetchData(sampleUrl);
+    const data = await fetchData(image);
+    if (data) {
+      changeImage(image, data);
+    }
   };
 
   return (
@@ -30,11 +33,15 @@ const ImageForm = () => {
           <input
             className="w-4/5 p-3 opacity-80 outline-none"
             type="text"
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
+            value={image}
+            onChange={(e) => setImage(e.target.value)}
           />
           <button className="flex-1 bg-cyan-800 text-white">Detect</button>
         </form>
+      </div>
+      <div className="mt-1.5 text-base font-bold">
+        {isLoading && <p>Loading image, please wait...</p>}
+        {error && <p className=" text-red-700">{error}</p>}
       </div>
     </div>
   );

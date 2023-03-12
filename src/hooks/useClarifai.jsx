@@ -1,9 +1,16 @@
 import axios from "axios";
+import { useState } from "react";
 import configClarifai from "../utils/configClarifai";
 
 const useClarifai = () => {
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(null);
+
   const fetchData = async (url) => {
     const { raw, targetUrl, API_KEY } = configClarifai(url);
+
+    setError(null);
+    setIsLoading(true);
 
     try {
       const res = await axios.post(targetUrl, raw, {
@@ -12,16 +19,19 @@ const useClarifai = () => {
           Authorization: "Key " + API_KEY,
         },
       });
-      console.log(res);
       const data = await res.data.outputs[0].data.regions;
 
-      console.log(data);
+      return data;
     } catch (err) {
-      console.log(err);
+      setError(
+        "Unable to get image. Please check your image URL or try again later."
+      );
+    } finally {
+      setIsLoading(false);
     }
   };
 
-  return [fetchData];
+  return [fetchData, isLoading, error];
 };
 
 export default useClarifai;
