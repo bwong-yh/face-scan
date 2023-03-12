@@ -11,7 +11,13 @@ const FaceRecognition = ({ imageUrl, imageData }) => {
 
   return (
     <div className="mt-10 flex justify-center">
-      {imageUrl && <img src={image} alt="image" />}
+      {imageUrl && (
+        <img
+          className="block h-auto w-[500px] object-contain"
+          src={image}
+          alt="image"
+        />
+      )}
     </div>
   );
 };

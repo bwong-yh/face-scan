@@ -17,16 +17,16 @@ function App() {
   return (
     <>
       <ParticlesBg type="cobweb" color="#7F8487" bg={true} />
-      <div className="App">
+
+      <div className="App flex flex-col ">
         <Nav />
 
-        <main className="mx-auto h-full w-10/12 max-w-screen-2xl">
+        <main className="mx-auto w-10/12 max-w-screen-2xl pb-3">
           <Logo />
           <ImageForm imageUrl={imageUrl} changeImage={changeImage} />
           <FaceRecognition imageUrl={imageUrl} imageData={imageData} />
         </main>
       </div>
-      )
     </>
   );
 }
