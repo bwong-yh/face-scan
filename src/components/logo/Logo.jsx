@@ -4,7 +4,7 @@ import brainLogo from "./brain.png";
 const Logo = () => {
   return (
     <Tilt
-      className="flex h-28 w-28 items-center justify-center overflow-hidden rounded-full border-[1px] border-black"
+      className="mb-12 flex h-28 w-28 items-center justify-center overflow-hidden rounded-full border-[1px] border-black"
       style={{
         background:
           "linear-gradient(315deg, rgba(0, 159, 198, 1) 25%, rgba(78, 185, 131, 1) 75%)",
