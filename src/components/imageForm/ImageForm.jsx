@@ -8,8 +8,6 @@ const ImageForm = ({ changeImage }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // const sampleUrl = "https://samples.clarifai.com/face-det.jpg";
-
     const data = await fetchData(image);
     if (data) {
       changeImage(image, data);
