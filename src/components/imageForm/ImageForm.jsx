@@ -15,7 +15,7 @@ const ImageForm = ({ changeImage }) => {
   };
 
   return (
-    <div className="mt-12 flex flex-col items-center justify-center">
+    <div className="flex flex-col items-center justify-center">
       <p className="text-3xl">
         Face Scan will scan faces on a image. Give it a try!
       </p>
