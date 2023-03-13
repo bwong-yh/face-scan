@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Signin = () => {
   return (
@@ -41,12 +41,12 @@ const Signin = () => {
           <button className="w-full rounded-md border-[1px] border-black bg-[#009fc6] py-3 text-center opacity-75 hover:opacity-100">
             <span className="text-lg font-bold">Sign in</span>
           </button>
-          <Link
+          <NavLink
             className="mt-6 block text-center text-sm font-bold text-gray-700"
             to="/signup"
           >
             Sign up
-          </Link>
+          </NavLink>
         </div>
       </form>
     </div>
